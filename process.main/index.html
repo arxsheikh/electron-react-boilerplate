@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+</head>
+
+<body>
+    <h1>Hello Best App</h1>
+
+    <button onclick="load()">
+        Load first app
+    </button>
+    <script>
+        const app = window.yawmik.dev
+        async function load() {
+            alert("work");
+            const path = "C:/Users/arxstd/OneDrive/Desktop/Reactapp + yawmik/my-app/build";
+            const port = 65535;
+            const result = await app.emit("start-server", { port, buildPath: path });
+            alert(result);
+        }
+    </script>
+
+</body>
+
+</html>
